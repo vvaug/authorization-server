@@ -26,6 +26,11 @@ public class OAuthSecurityConfiguration extends AuthorizationServerConfigurerAda
 				.withClient("restaurante-vo-maria")
 				.authorizedGrantTypes("password")
 				.secret(encoder.encode("1234"))
+				.scopes("web", "mobile")
+			.and()
+				.withClient("entregador")
+				.authorizedGrantTypes("password")
+				.secret(encoder.encode("1234"))
 				.scopes("web", "mobile");
 	}
 	
